@@ -50,7 +50,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <p>
         Read the blog posts or check
         <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+          className="underline decoration-dashed underline-offset-4 /*SKIN:hover:text-skin-accent*/"
           href="https://github.com/satnaing/astro-paper#readme"
         >
           README
@@ -125,39 +125,19 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 </Layout>
 
 <style>
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-  }
-
+        @reference "tailwindcss";
+/* ===== Hero Section ===== */
+#hero { @apply pb-6 pt-8;  }
+  #hero h1 { @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;  }
+  #hero .rss-link { @apply mb-6;  }
+  #hero .rss-icon { @apply mb-2 h-6 w-6 scale-110 sm:mb-3 sm:scale-125;  fill: var(--color-skin-accent); }
+  #hero p { @apply my-2;  }
+  .social-wrapper { @apply mt-4 flex flex-col sm:flex-row sm:items-center;  }
+  .social-links { @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;  }
   /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pb-6 pt-12;
-  }
+#featured,
+#recent-posts { @apply pb-6 pt-12;  }
   #featured h2,
-  #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
-  }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
-  }
+#recent-posts h2 { @apply text-2xl font-semibold tracking-wide;  }
+  .all-posts-btn-wrapper { @apply my-8 text-center;  }
 </style>
