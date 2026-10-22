@@ -9,6 +9,8 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
+  // Astro 7 defaults to compressHTML: "jsx" (JSX whitespace rules); keep the Astro 6 behaviour until the rendered spacing has been reviewed.
+  compressHTML: true,
   site: SITE.website,
   integrations: [react(), sitemap()],
   markdown: {
