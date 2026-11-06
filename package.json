@@ -61,5 +61,14 @@
     "*.{js,jsx,ts,tsx,md,mdx,json,astro}": [
       "prettier --write --plugin=prettier-plugin-astro"
     ]
+  },
+  "overrides": {
+    "@divriots/jampack": {
+      "sharp": "^0.35.5",
+      "undici": "^6.29.1"
+    },
+    "@divriots/cheerio": {
+      "undici": "^6.29.1"
+    }
   }
 }
